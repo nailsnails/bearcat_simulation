@@ -60,6 +60,7 @@ sudo apt install ros-$ROS_DISTRO-controller-manager
     colcon build --packages-select velodyne_gazebo_plugins
     colcon build --packages-select waypoints_niagara_creator
     colcon build --packages-select waypoints_niagara_loader
+    colcon build --packages-select waypoints_calculations
     ```
     
 3. Source the workspace:
