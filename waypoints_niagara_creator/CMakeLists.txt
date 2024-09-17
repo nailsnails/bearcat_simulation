@@ -48,7 +48,7 @@ install(TARGETS waypoints_creator_node
   DESTINATION lib/${PROJECT_NAME})
 
 install(
-  DIRECTORY launch src config
+  DIRECTORY launch src
   DESTINATION share/${PROJECT_NAME}
 )
 
