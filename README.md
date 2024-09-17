@@ -41,7 +41,7 @@ sudo apt install ros-$ROS_DISTRO-controller-manager
 2. Clone the repository:
     
     ```
-    
+    git clone https://github.com/armando-genis/Ackermann-Autonomous-Car-Simulation.git
     ```
     
 
