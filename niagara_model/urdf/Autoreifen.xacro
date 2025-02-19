@@ -2,16 +2,28 @@
 <robot name="dasautonomeauto" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 
-  <xacro:property name="tire_dia" value="0.07"/>  <!-- Reduced from 0.440 OLD = 0.350-->
-  <xacro:property name="tire_width" value="0.02"/>  <!-- Reduced from 0.195 OLD: 0.195-->
-  <xacro:property name="hub_dia" value="0.001"/>  <!-- Reduced from 0.235 OLD: 0.235 -->
+  <xacro:property name="tire_dia" value="0.12"/>  <!-- Reduced from 0.440 OLD = 0.350-->
+  <xacro:property name="tire_width" value="0.06"/>  <!-- Reduced from 0.195 OLD: 0.195-->
+  <xacro:property name="hub_dia" value="0.00"/>  <!-- Reduced from 0.235 OLD: 0.235 -->
 
-  <xacro:property name="hex_hub_depth" value="0.008"/> <!-- or +0.072 OLD: 120-->  
+  <!-- hub_dia and tire_dia are the diameters of the hub and tire,
+       respectively. hex_hub_depth is the distance that the hex hub is
+       inset from the outer edge of the tire. It is set so that each wheel
+       is a "zero offset" wheel. hex_hub_depth = tire_width / 2 -
+       axle_length. -->
+
+
+  <xacro:property name="hex_hub_depth" value="0.0319"/> <!-- or +0.072 OLD: 120-->  
   <xacro:property name="wheel_mass" value="0.1"/>   <!-- check  OLD: 8.0-->
+  
+  <!-- hex_hub_dist is the distance between left and right hex hubs when
+       the shock absorbers are fully extended. axle_length is the distance
+       from a U joint to the corresponding hex hub. wheel_travel is the
+       vertical wheel travel. -->
 
 
-  <xacro:property name="wheelbase" value="0.206"/>
-  <xacro:property name="hex_hub_dist" value="0.005"/>  
+  <xacro:property name="wheelbase" value="024"/> 
+  <xacro:property name="hex_hub_dist" value="0.18"/>  
   <xacro:property name="wheel_travel" value="0.0209492959255614"/> 
 
   <xacro:property name="axle_eff_limit" value="20.495"/>
@@ -31,7 +43,7 @@
   <xacro:property name="degrees_90" value="1.57079633"/>
   <xacro:property name="degrees_180" value="3.14159265"/>
 
-  <xacro:property name="servo_stall_torque" value="5"/>  <!-- check -->
+  <xacro:property name="servo_stall_torque" value="3"/>  <!-- check -->
   <xacro:property name="servo_no_load_speed" value="2.5"/> <!-- check -->
 
   <material name="black">
@@ -55,7 +67,7 @@
 
   <xacro:macro name="null_inertial">
     <inertial>
-      <mass value="4.5"/>
+      <mass value="0.5"/>
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
   </xacro:macro>
