@@ -28,7 +28,11 @@ def generate_launch_description():
         package='robot_state_publisher',
         executable='robot_state_publisher',
         emulate_tty=True,
-        parameters=[{'use_sim_time': use_sim_time, 'robot_description': Command(['xacro ', LaunchConfiguration('model')])}]
+        #parameters=[{'use_sim_time': use_sim_time, 'robot_description': Command(['xacro ', LaunchConfiguration('model')])}]
+        parameters=[{
+            'use_sim_time': use_sim_time, 
+            'robot_description': launch_ros.parameter_descriptions.ParameterValue(
+                Command(['xacro ', LaunchConfiguration('model')]), value_type=str)}]
     )
     
     joint_state_publisher_node = launch_ros.actions.Node(
@@ -81,6 +85,6 @@ def generate_launch_description():
                 rviz_node
                 # position_controller
             ],
-            period='6.0',  
+            period=6.0,  
         ),
     ])

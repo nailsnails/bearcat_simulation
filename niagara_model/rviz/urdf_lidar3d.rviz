@@ -178,7 +178,7 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /points_raw
+        Value: /LaserScan
       Use Fixed Frame: true
       Use rainbow: true
       Value: true

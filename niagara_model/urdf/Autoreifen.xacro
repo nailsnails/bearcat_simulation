@@ -2,37 +2,37 @@
 <robot name="dasautonomeauto" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 
-  <xacro:property name="tire_dia" value="0.350"/>  <!-- Reduced from 0.440 -->
-  <xacro:property name="tire_width" value="0.195"/>  <!-- Reduced from 0.195 -->
-  <xacro:property name="hub_dia" value="0.235"/>  <!-- Reduced from 0.235 -->
+  <xacro:property name="tire_dia" value="0.07"/>  <!-- Reduced from 0.440 OLD = 0.350-->
+  <xacro:property name="tire_width" value="0.02"/>  <!-- Reduced from 0.195 OLD: 0.195-->
+  <xacro:property name="hub_dia" value="0.001"/>  <!-- Reduced from 0.235 OLD: 0.235 -->
 
-  <xacro:property name="hex_hub_depth" value="0.120"/> <!-- or +0.072 -->  
-  <xacro:property name="wheel_mass" value="8.0"/>   <!-- check -->
+  <xacro:property name="hex_hub_depth" value="0.008"/> <!-- or +0.072 OLD: 120-->  
+  <xacro:property name="wheel_mass" value="0.1"/>   <!-- check  OLD: 8.0-->
 
 
-  <xacro:property name="wheelbase" value="2.1"/>
-  <xacro:property name="hex_hub_dist" value="0.9191"/> 
-  <xacro:property name="wheel_travel" value="0.209492959255614"/> 
+  <xacro:property name="wheelbase" value="0.206"/>
+  <xacro:property name="hex_hub_dist" value="0.005"/>  
+  <xacro:property name="wheel_travel" value="0.0209492959255614"/> 
 
-  <xacro:property name="axle_eff_limit" value="204.95"/>
-  <xacro:property name="axle_vel_limit" value="39.02"/>
+  <xacro:property name="axle_eff_limit" value="20.495"/>
+  <xacro:property name="axle_vel_limit" value="3.902"/>
 
   <!-- Properties of the car -->
-  <xacro:property name="front_wheel_x" value="0.787346576344423"/>
-  <xacro:property name="front_wheel_y" value="0.495625727164768"/>
-  <xacro:property name="front_wheel_z" value="0.1094929592556163"/>
+  <xacro:property name="front_wheel_x" value="0.1"/>
+  <xacro:property name="front_wheel_y" value="0.105"/>
+  <xacro:property name="front_wheel_z" value="0.1"/>
 
-  <xacro:property name="rear_wheel_x" value="1.04780116842239"/>
-  <xacro:property name="rear_wheel_y" value="0.495625727164768"/>
-  <xacro:property name="rear_wheel_z" value="0.1094929592556163"/>
+  <xacro:property name="rear_wheel_x" value="0.1"/>
+  <xacro:property name="rear_wheel_y" value="-0.105"/>
+  <xacro:property name="rear_wheel_z" value="0.1"/>
 
   <!-- Degree-to-radian conversions -->
   <xacro:property name="degrees_45" value="0.785398163"/>
   <xacro:property name="degrees_90" value="1.57079633"/>
   <xacro:property name="degrees_180" value="3.14159265"/>
 
-  <xacro:property name="servo_stall_torque" value="50"/>  <!-- check -->
-  <xacro:property name="servo_no_load_speed" value="25"/> <!-- check -->
+  <xacro:property name="servo_stall_torque" value="5"/>  <!-- check -->
+  <xacro:property name="servo_no_load_speed" value="2.5"/> <!-- check -->
 
   <material name="black">
       <color rgba="0 0 0 1"/>
@@ -187,10 +187,5 @@
     <xacro:macro name="rear_wheel_to_base" params="lr_prefix fr_prefix lr_reflect fr_reflect">
         <xacro:rear_wheel lr_prefix="${lr_prefix}" fr_prefix="${fr_prefix}" lr_reflect="${lr_reflect}"/>
     </xacro:macro>
-
-
-
-
-  
 
 </robot>
