@@ -14,7 +14,7 @@
 
 
   <xacro:property name="hex_hub_depth" value="0.0319"/> <!-- or +0.072 OLD: 120-->  
-  <xacro:property name="wheel_mass" value="0.1"/>   <!-- check  OLD: 8.0-->
+  <xacro:property name="wheel_mass" value="0.2"/>   <!-- check  OLD: 8.0-->
   
   <!-- hex_hub_dist is the distance between left and right hex hubs when
        the shock absorbers are fully extended. axle_length is the distance
@@ -131,6 +131,7 @@
       <origin xyz="0 0 0" rpy="1.5708 0 0" />
       <axis xyz="0 0 -1"/>
       <limit effort="${axle_eff_limit}" velocity="${axle_vel_limit}"/>
+      <dynamics damping="0.05" friction="0.1"/> 
     </joint>
 
     <gazebo reference="${lr_prefix}_${fr_prefix}_wheel">
@@ -180,6 +181,7 @@
       <origin xyz="${fr_reflect * rear_wheel_x} ${lr_reflect * rear_wheel_y} ${-rear_wheel_z}" rpy="1.5708 0 0"/>
       <axis xyz="0 0 -1"/>
       <limit effort="${axle_eff_limit}" velocity="${axle_vel_limit}"/>
+      <dynamics damping="0.05" friction="0.1"/> 
     </joint>
 
     <gazebo reference="${lr_prefix}_${fr_prefix}_wheel">

@@ -10,7 +10,7 @@
 
     <!-- Robot mechanical and motor parameters -->
     <xacro:property name="PI" value="3.1415926535897931"/>
-    <xacro:property name="wheel_width" value="0.24" />
+    <xacro:property name="wheel_width" value="0.26" />
     <xacro:property name="clearance" value="0.002" />
 
     <!--  BASE FOOTPRINT  -->
@@ -26,8 +26,8 @@
     <!-- BASE_LINK -->
     <link name="base_link">
         <inertial>
-            <mass value="1.0" />
-            <origin xyz="0 0 0.025" />
+            <mass value="50.0" />
+            <origin xyz="0 0 0.06" />
             <inertia  ixx="0.149895" ixy="0.0"  ixz="0.0"  iyy="0.066374"  iyz="0.0"  izz="0.139202" />
         </inertial>
         <visual>
