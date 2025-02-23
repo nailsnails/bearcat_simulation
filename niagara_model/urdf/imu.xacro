@@ -45,7 +45,7 @@
 
     <joint name="imu_joint" type="fixed">
         <parent link="base_link"/>
-        <child link="imu_link"/>Topic
+        <child link="imu_link"/>
         <origin xyz="0 0 0.01"/>
     </joint>
 
