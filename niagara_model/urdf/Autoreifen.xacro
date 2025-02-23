@@ -31,11 +31,11 @@
 
   <!-- Properties of the car -->
   <xacro:property name="front_wheel_x" value="0.1"/>
-  <xacro:property name="front_wheel_y" value="0.105"/>
+  <xacro:property name="front_wheel_y" value="0.125"/>
   <xacro:property name="front_wheel_z" value="0.1"/>
 
   <xacro:property name="rear_wheel_x" value="0.1"/>
-  <xacro:property name="rear_wheel_y" value="-0.105"/>
+  <xacro:property name="rear_wheel_y" value="-0.125"/>
   <xacro:property name="rear_wheel_z" value="0.1"/>
 
   <!-- Degree-to-radian conversions -->
