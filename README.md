@@ -13,6 +13,8 @@ sudo apt install ros-$ROS_DISTRO-ros2-control ros-$ROS_DISTRO-ros2-controllers
 sudo apt install ros-$ROS_DISTRO-controller-manager
 ```
 
+This package assumes that the `realsense2_description` package with the camera description files installed. 
+
 ### → Step 1: Create a ROS2 Workspace
 
 1. Open a terminal and **Set up ROS2**.
