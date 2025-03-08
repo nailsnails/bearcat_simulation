@@ -81,11 +81,11 @@ sudo apt install ros-$ROS_DISTRO-controller-manager
     ros2 launch niagara_model display_gui.launch.py
     ```
     
-### Step 5: Moving the Bearcar with the `teleop_twist_keboard`
+### → Step 5: Moving the Bearcar with the `teleop_twist_keboard`
 
 When the simulation is running, start the `twist_to_ackermann` and the `teleop_twist_keboard` package each in a terminal. Steer the car with the commands of the `teleop_twist_keyboard`. The Bearcar should move now and you should see the visualization of lidar and camera data in RViz.  
 
-### Alternative Step 5 : Moving the Car with `cmd_vel`
+### → Alternative Step 5 : Moving the Car with `cmd_vel`
 
 1. You can manually move the car using the `cmd_vel` command in the terminal. This command publishes velocity messages to control the car's movement:
     
